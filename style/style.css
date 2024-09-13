@@ -1,0 +1,67 @@
+@font-face {
+    font-family: NerkoOne;
+    src: url(../fonts/NerkoOne-Regular.ttf);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Nerko+One&display=swap');
+
+.nerko-one-regular {
+  font-family: "Nerko One", system-ui;
+  font-weight: 400;
+  font-style:inherit;
+}
+
+ol li {
+    background-color: aqua;
+}
+
+h2 {
+    background-color: cadetblue;
+    font-family: NerkoOne;
+}
+
+.parrafo {
+    color: yellow;
+
+}
+.texto {
+    color: blue;
+    width: 500px;
+}
+
+.noticia {
+    color: red;
+}
+
+#titulo {
+    color: blueviolet;
+    font-family:  'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+    font-style: inherit;
+}
+
+.x{
+    color: blueviolet;
+    font-family:  'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bolder;
+    font-size: 1.5rem;
+}
+
+.ingredientes {
+    background-color: rgb(11, 243, 243);
+}
+
+/* ------- Cajas ------- */
+#cajas {
+    margin-bottom: 10px;
+    border-radius: 10%;
+}
+.box {
+    width: 50px;
+    height: 50px;
+    background-color: #ff0;
+    margin: 5px 10px 15px 20px;
+    border: solid 1px #b31c1c;
+    padding: 20px 0 0 20px;
+    border-radius: 10%;
+}
