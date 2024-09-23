@@ -1,0 +1,170 @@
+.box {
+margin: 20px;
+width: 250px;
+height: 250px;
+
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 3rem;
+cursor: pointer;
+
+border-radius: 50px;
+background: #e0e0e0;
+box-shadow:  20px 20px 60px #bebebe,
+             -20px -20px 60px #ffffff;
+}
+
+.animations {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+.one {
+    background-color: #3498db;
+    transition: background-color 1s ease;
+    
+}
+.one:hover {
+    background-color: #0a3049;
+}
+
+
+
+.two {
+    background-color: #34dbb7;
+    transition: background-color 2s ease, transform 1s ease;
+
+    transform: scale(1);
+
+    animation: two 5s ease infinite;
+}
+
+.two:hover {
+    transform: scale(1.2);
+    background-color: #1873af;
+}
+
+@keyframes two {
+    0%, 100% {
+    }
+
+    0%{
+        transform: scale(1);
+        background-color: #4f719e;
+    }
+
+    50% {
+        transform: scale(1.1);
+        background-color: #34dbb7;
+    }
+
+    75% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1.1);
+        background-color: #0a5e4c;
+    }
+
+
+}
+
+
+
+
+.three {
+    background-color: #db3482;
+    transition: background-color 2s ease, transform 1s ease;
+
+    transform: scale(1) rotate(0deg);
+}
+
+.three:hover {
+    transform: scale(1.1) rotate(180deg);
+    background-color: #441e81;
+
+}
+
+
+
+.four {
+    background-color: #34db74;
+    transition: background-color 2s ease, transform 1s ease;
+
+    transform: scale(1) rotate(0deg) translate(0, 0);
+}
+
+.four:hover {
+    transform: scale(1.1) rotate(180deg) translate(200px, 0px);
+    background-color: #63811e;
+}
+
+
+
+.five {
+    background-image: url(../img/WoWScrnShot_071424_091334.jpg);
+    background-size:cover;
+    transition: background-color 2s ease, transform 1s ease, opacity 1s ease;
+
+    transform: scale(1) rotate(180deg) ;
+    opacity: .5;
+}
+
+.five:hover {
+    transform: scale(1.1) rotate(0deg);
+    background-image: url(../img/WoWScrnShot_071424_091334.jpg);
+    opacity: 1;
+}
+
+
+
+.six {
+    background-color: aliceblue;
+    color: black;
+    transition: color 1s ease, font-size 1s ease;
+}
+
+.six:hover {
+    color: #db3482;
+    font-size: 6rem;
+}
+
+
+
+
+@keyframes seven {
+    0%, 100%{
+        transform: translatey(0)
+    }
+
+    25% {
+        transform: translatey(-20px);
+        background-color: yellow;
+
+    }
+    
+    50% {
+        transform: rotate(180deg);
+        background-color: blue;
+    }
+
+    75% {
+        background-color: #ff0505;
+    }
+
+    100% {
+        font-size: 6rem;
+    }
+}
+
+.seven:hover {
+    animation: seven 5s ease infinite;
+}
+
+.seven {
+    animation: seven 5s ease infinite;
+}
