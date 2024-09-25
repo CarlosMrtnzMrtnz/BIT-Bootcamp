@@ -15,8 +15,12 @@
   font-style:inherit;
 }
 
+.btnn {
+    cursor: pointer;
+}
 ol li {
     background-color: rgb(33, 134, 173);
+    list-style: none;
 }
 
 h2 {

@@ -1,0 +1,41 @@
+
+.box {
+    width: 300px;
+    height: 200px;
+    background-color: aquamarine;
+    display: flex;
+    justify-content: center;
+
+
+}
+
+.input-one {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.box-two {
+    display: flex;
+    justify-content: space-around;
+
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+}
+
+.icons {
+    width:127px ;
+    height: 87px;
+    background-color: aqua;
+    margin: 5px;
+}
+
+
+.fa-facebook {
+    color: rgb(226, 17, 62);
+}
