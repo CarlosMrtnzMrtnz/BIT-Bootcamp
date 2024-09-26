@@ -39,3 +39,25 @@ nav {
 .fa-facebook {
     color: rgb(226, 17, 62);
 }
+
+.x {
+    fill: #ec600f;
+    
+}
+/* -------pokemon----- */
+
+.pokemon-box {
+    display: flex;
+    justify-content: center;
+    margin: 0 0 100px 0;
+}
+
+.img1 {
+    width: 568px;
+    height: 321px;
+}
+
+.img2 {
+    width: 276px;
+    height: 156px;
+}
