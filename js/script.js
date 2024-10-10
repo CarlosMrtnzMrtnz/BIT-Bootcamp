@@ -9,6 +9,7 @@ let objeto = {
 }
 let undefi
 
+
 console.log(letras);
 console.log(typeof num2);
 console.log(objeto);
@@ -264,13 +265,13 @@ if(true){
         console.log("Segundo if");
         
     }else {
-        console.log("Segundo if netrando en else");
+        console.log("Segundo if etrando en else");
     }
        
 }else{
     console.log("Error!");
 }
-
+altura= 0
 // altura = parseInt(prompt("introduce estatura"))
 if (altura < 140) {
     console.log("Gnomo");
@@ -281,7 +282,7 @@ if (altura < 140) {
 } else {
     console.log("Gigante");
 }
-
+ingresa = 0
 // ingresa = prompt("ingresa un numero de 1 a 2")
 switch (ingresa) {
     case "hamburguesa":
@@ -319,3 +320,85 @@ console.log("-------------------------------------------------------------------
 console.log("--------------------------------------------------------------------");
 console.log("--------------------------------------------------------------------"); 
 console.log("--------------------------------------------------------------------");
+// for (const key in order) {
+//     if (Object.prototype.hasOwnProperty.call(order, key)) {
+//         const element = order[key];
+//         console.log(element);
+        
+//     }
+// }
+
+
+let order= [
+    {
+        name: "Pedro",
+        apellido: "picapiedra",
+        genero: "M",
+        estatura: 180,
+        edad: 21,
+        peso: 81,
+        idiomas:[
+            "ingles",
+            "español",
+            "italiano",
+            "holandes"
+        ]
+    },
+    {
+        name: "Marta",
+        apellido: "Perez",
+        genero: "F",
+        estatura: 170,
+        edad: 29,
+        peso: 70,
+        idiomas:[
+            "ingles",
+            "español",
+            "aleman"
+        ],
+        vivo : true
+    }
+]
+
+//-- Acceder a valores de objetos
+
+
+//-- Saber si un apropiedad existe object.hasownproperty("property")
+
+
+//-- Añadir propiedad al objeto
+
+
+//-- Modificar valores
+
+
+//-- Eliminar propiedades de objetos
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//-- Funcion constructora
+
+
