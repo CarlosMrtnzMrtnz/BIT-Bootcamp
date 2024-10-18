@@ -331,7 +331,7 @@ console.log("-------------------------------------------------------------------
 
 let order= [
     {
-        name: "Pedro",
+        name: "Quinto",
         apellido: "picapiedra",
         genero: "M",
         estatura: 180,
@@ -362,9 +362,76 @@ let order= [
 
 //-- Acceder a valores de objetos
 
+// for (let i = 0; i < order.length; i++) {
+//     const element = order[i];
+//     idiom = element.idiomas
 
-//-- Saber si un apropiedad existe object.hasownproperty("property")
+//     console.log(idiom);
+    
 
+//     for (let index = 0; index < idiom.length; index++) {
+//         const elemento = idiom[index];
+//         if(elemento == "italiano"){
+//             console.log(`usuario ${order[i].name} habla ${elemento}`);
+            
+//         }
+        
+//     }
+
+//     console.log(`el elemnto ${i} de la array tiene nombre ${element.name}, tiene una edad de 
+//         ${element.edad} y un peso de ${element.peso}`);
+    
+    
+    
+// }
+
+// let numeros = [ [1, 2, 3, 5], [55, 6, 7], [8, 9 , 10], [11, 12, 14]]
+
+// let total = 0
+// for (let i = 0; i < numeros.length; i++) {
+//     const element = numeros[i];
+//     console.log(element);
+
+//     for(let x = 0; x < element.length; x++){
+//         const numero = element[x]
+//         console.log(numero);
+//          total += numero
+//         }
+//     }
+//     console.log(total);
+
+
+
+
+//-- Saber si un apropiedad existe object.hasOwnProperty("property")
+
+
+console.log(order.hasOwnProperty("vivo"));
+// order[0].vivo = true
+
+// console.log(order);
+
+for (let index = 0; index < order.length; index++) {
+    const element = order[index];
+
+    if (!element.hasOwnProperty("vivo")) {
+        element.vivo = true
+    }
+    
+    if (element.hasOwnProperty("vivo")) {
+        element.vivo = false
+    }
+
+    if (element.hasOwnProperty("hijos")) {
+        delete element.peso
+    }
+    
+
+
+}
+console.log(order);
+
+2< 3 && 5>2
 
 //-- Añadir propiedad al objeto
 
@@ -374,30 +441,168 @@ let order= [
 
 //-- Eliminar propiedades de objetos
 
+console.log("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+console.log("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+console.log("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+console.log("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+
+// •	Tienes una lista de productos y necesitas aplicar un 10% de descuento a los productos que superan los $200.
+	const productos = [ 
+    	    {nombre: "Televisor", precio: 300}, //indice 0
+    	     {nombre: "Celular", precio: 200}, // indice 1
+    	    {nombre: "Laptop", precio: 1000}, // indice 2
+    	     {nombre: "Tablet", precio: 150}  // indice 3
+    	    ];
+    
+            for (let index = 0; index < productos.length; index++) {
+                const element = productos[index];
+                
+                if ( element.precio > 200) {
+                    element.precio =  element.precio * 0.9
+                }
+            }
+    
+    // Tienes una lista de usuarios y necesitas filtrar aquellos que están activos.
+
+    	const usuarios = [ 
+        	    {nombre: "Laura", activo: true},
+        	    {nombre: "Pedro", activo: false}, 
+        	    {nombre: "Marta", activo: true},
+        	    {nombre: "Jorge", activo: false}
+        	     ];
+        
+activos = []
+
+    for (let index = 0; index < usuarios.length; index++) {
+        const element = usuarios[index];
+
+        if (element.activo) {
+            
+            activos.push(element)
+
+            usuarios.splice(index, 1)
+
+        }
+    }
+
+
+console.log(activos);
+console.log(usuarios);
+console.log("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+console.log("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+
+	const arrUsuarios = [
+    	    {nombre: "Laura", edad: 30, activo: true},
+    	    {nombre: "Pedro", edad: 25, activo: false},
+    	    {nombre: "Marta", edad: 28, activo: true},
+    	    {nombre: "Jorge", edad: 35, activo: false},
+    	    {nombre: "Ana", edad: 40, activo: true} 
+    	   ];
+    
+        let userActivos = []
+        let sumaEdades = 0
+
+           for (let i = 0; i < arrUsuarios.length; i++) {
+            const element = arrUsuarios[i];
+            
+            if (element.activo) {
+                userActivos.unshift(element)
+                console.log(element.activo);
+                
+            }
+  
+        }
+        
+        for (let index = 0; index < userActivos.length; index++) {
+            const elemento = userActivos[index];
+            sumaEdades += elemento.edad / userActivos.length;
+        }
+
+        console.log(`suma = ${Math.round(sumaEdades)}`);
+        console.log(`suma = ${sumaEdades.toFixed(0)}`);
+
+        console.log((Math.floor(Math.random() * 11)));
+        
+
+
+        
 
 
 
+console.log("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+console.log("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+console.log("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+console.log("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
 
 
+	const users = [
+    	    { nombre: "Laura", edad: 30, activo: true, productos: [
+    	        { nombre: "Televisor", precio: 300 }, { nombre: "Celular", precio: 200 }
+    	    ] },
+    	    { nombre: "Pedro", edad: 25, activo: false, productos: [
+    	        { nombre: "Laptop", precio: 1000 }, { nombre: "Tablet", precio: 150 }
+    	    ] },
+    	    { nombre: "Marta", edad: 28, activo: true, productos: [
+    	        { nombre: "Bicicleta", precio: 250 }, { nombre: "Audífonos", precio: 50 }
+    	    ] },
+    	    { nombre: "Jorge", edad: 35, activo: false, productos: [
+    	        { nombre: "Consola", precio: 400 }, { nombre: "Monitor", precio: 180 }
+    	    ] },
+    	    { nombre: "Ana", edad: 40, activo: true, productos: [
+    	        { nombre: "PC", precio: 1200 }, { nombre: "Impresora", precio: 180 }
+    	    ] }
+    	  ];
+    
+          let ActUser = []
+          let promEdades = 0
+
+        for (let i = 0; i < users.length; i++) {
+            const user = users[i];
+            console.log(user);
+            console.log(user.activo);
+            
+            
+            if (user.activo) {
+                ActUser.push(user)
+            }
+
+        }
+                 
+        for (let index = 0; index < ActUser.length; index++) {
+            const element = ActUser[index];
+          promEdades += element.edad / ActUser.length
+
+        }
+
+        console.log(promEdades.toFixed(0));
+
+        for (let index = 0; index < ActUser.length; index++) {
+            const element = ActUser[index].productos
+            
+            for (let i = 0; i < element.length; i++) {
+                const elemento = element[i];
+                
+                if (elemento.precio > 200) {
+                    elemento.precio = elemento.precio * 0.9
+                }
+            }
 
 
+        }
+        
+        console.log(ActUser);
+
+        function pruebaFuncion (param1, param2) {
+            console.log(param1 + param2); 
+        }
+
+        trigerFuntion = (param1, param2)=> {
+            console.log(param1 + param2);
+        }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        trigerFuntion2 = () => console.log("hola");
+        
 
 //-- Funcion constructora
 
