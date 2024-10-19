@@ -77,10 +77,141 @@ function izquierdo (num1, num2) {
         btnAlert.style.backgroundColor = "blue"
         console.log(e.target.innerText);
         img = document.getElementById(e.target.dataset.id)
-        console.log(img);
+        // console.log(img);
         img.style.color = "red"
         
      })
     
  }
+
+
+let botonesX = document.querySelectorAll(".botonesX")
+
+for (let index = 0; index < botonesX.length; index++) {
+    const element = botonesX[index];
+    
+    element.addEventListener('click', (evento)=>{
+        let deleteCard = document.getElementById(evento.target.dataset.id)
+        // console.log(deleteCard);
+        deleteCard.style.display = "none"
+    })
+}
+// ---------------- CAmbio de bg random ------------
+
+let btnBg = document.getElementById("bg")
+btnBg.addEventListener("click", (evento)=> {
+    color1 = Math.floor(Math.random()*255)
+    color2 = Math.floor(Math.random()*255)
+    color3 = Math.floor(Math.random()*255)
+
+    color = `rgb(${color1}, ${color2}, ${color3})`
+    
+
+    document.body.style.backgroundColor = color
+    
+})
+        // console.log(Math.floor(Math.random()*255));
+
+        // exa= [0,1,2,4,5,6,7,8,9,0,"a","b","c","d","f"]
+
+
+    // ------------- elemtos ------------------
+    const prendas = [
+        {
+          nombre: "Camiseta",
+          precio: 15.99,
+          detalle: "Camiseta de algodón de manga corta",
+          tipo: "Top",
+          cantidad: 50,
+          marca: "Nike"
+        },
+        {
+          nombre: "Pantalón",
+          precio: 39.99,
+          detalle: "Pantalón de mezclilla ajustado",
+          tipo: "Bottom",
+          cantidad: 30,
+          marca: "Levi's"
+        },
+        {
+          nombre: "Chaqueta",
+          precio: 79.99,
+          detalle: "Chaqueta de cuero sintético",
+          tipo: "Abrigo",
+          cantidad: 20,
+          marca: "Zara"
+        },
+        {
+          nombre: "Vestido",
+          precio: 45.50,
+          detalle: "Vestido de verano con estampado floral",
+          tipo: "Ropa formal",
+          cantidad: 15,
+          marca: "H&M"
+        },
+        {
+          nombre: "Sudadera",
+          precio: 29.99,
+          detalle: "Sudadera con capucha de felpa",
+          tipo: "Top",
+          cantidad: 25,
+          marca: "Adidas"
+        },
+        {
+          nombre: "Falda",
+          precio: 22.99,
+          detalle: "Falda plisada de seda",
+          tipo: "Bottom",
+          cantidad: 10,
+          marca: "Mango"
+        }
+      ];
+      
+      let listar = document.getElementById("listar")
+
+      listar.addEventListener("click", (evento)=>{
+
+        for (let i = 0; i < prendas.length; i++) {
+            const element = prendas[i];
+                 
+            let tarjeta = document.getElementById("grilla")
+            tarjeta.innerHTML += `
+        <div class="card col-3" id="${i}"  style="width: 18rem;">
+            <div class="position-absolute top-0 end-0 me-3">
+                <button  data-id="${i}"  class="btn botonesX p-0 text-danger fw-bold" >X</button>
+            </div>
+
+            <div class="card-body">
+              <h5 id="cardTittle" class="card-title">${element.nombre}</h5>
+              <p id="descripcion" class="card-text">${element.detalle}</p>
+              <p id="cantidad" class="card-text"> ${element.cantidad}</p>
+              <div class="d-flex justify-content-center">
+                <a id="precio" href="#" class="btn btn-primary">${element.precio}</a>
+              </div>
+            </div>
+        </div>`
+
+        }
+      })
+            //       girlla = document.getElementById("f")
+            // girlla.innerHTML = `<button class="btn btn-prymari" id="bg">${element.precio}</button>`
+
+let eliminar = document.getElementsByClassName("botonesX")
+console.log(eliminar);
+
+
+for (let index = 0; index < eliminar.length; index++) {
+    const element = eliminar[index];
+
+    element.addEventListener("click", (evento)=>{
+        
+        let borrar = document.getElementById(evento.target.dataset.id)
+        
+        console.log(borrar);
+
+        borrar.innerHTML.style.display = "none"
+    
+    })
+}
+
 
