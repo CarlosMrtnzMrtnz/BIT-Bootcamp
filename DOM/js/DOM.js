@@ -85,17 +85,17 @@ function izquierdo (num1, num2) {
  }
 
 
-let botonesX = document.querySelectorAll(".botonesX")
+// let botonesX = document.querySelectorAll(".botonesX")
 
-for (let index = 0; index < botonesX.length; index++) {
-    const element = botonesX[index];
+// for (let index = 0; index < botonesX.length; index++) {
+//     const element = botonesX[index];
     
-    element.addEventListener('click', (evento)=>{
-        let deleteCard = document.getElementById(evento.target.dataset.id)
-        // console.log(deleteCard);
-        deleteCard.style.display = "none"
-    })
-}
+//     element.addEventListener('click', (evento)=>{
+//         let deleteCard = document.getElementById(evento.target.dataset.id)
+//         // console.log(deleteCard);
+//         deleteCard.style.display = "none"
+//     })
+// }
 // ---------------- CAmbio de bg random ------------
 
 let btnBg = document.getElementById("bg")
@@ -190,28 +190,63 @@ btnBg.addEventListener("click", (evento)=> {
               </div>
             </div>
         </div>`
+        let eliminar = document.getElementsByClassName("botonesX")
 
-        }
-      })
-            //       girlla = document.getElementById("f")
-            // girlla.innerHTML = `<button class="btn btn-prymari" id="bg">${element.precio}</button>`
-
-let eliminar = document.getElementsByClassName("botonesX")
-console.log(eliminar);
 
 
 for (let index = 0; index < eliminar.length; index++) {
     const element = eliminar[index];
-
+    // console.log(element);
+    
     element.addEventListener("click", (evento)=>{
         
         let borrar = document.getElementById(evento.target.dataset.id)
         
         console.log(borrar);
 
-        borrar.innerHTML.style.display = "none"
+        borrar.style.display = "none"
     
     })
 }
 
+        }
+      })
+            //       girlla = document.getElementById("f")
+            // girlla.innerHTML = `<button class="btn btn-prymari" id="bg">${element.precio}</button>`
 
+
+
+
+let eliminarCards = document.getElementsByClassName("botonesX")
+
+for (let index = 0; index < eliminarCards.length; index++) {
+    const elemento = eliminarCards[index];
+
+    elemento.addEventListener("click", (evento) => {
+        let cards = document.getElementById(evento.target.dataset.id)
+        cards.style.display = "none"
+    })
+}
+
+
+// ---------------------------------------------
+
+let inputsRange = document.getElementsByTagName("input")
+
+for (let index = 0; index < inputsRange.length; index++) {
+    const element = inputsRange[index];
+    
+    element.addEventListener("input", (evento) => {
+        
+        let red = document.getElementById("red")
+        let green = document.getElementById("green")
+        let blue = document.getElementById("blue")
+        console.log(`RED: ${red.value}`);
+        console.log(`Green: ${green.value}`);
+        console.log(`Blue: ${blue.value}`);
+        
+        
+        
+        document.body.style.backgroundColor = `rgb(${red.value},${green.value},${blue.value})`
+    })
+}
