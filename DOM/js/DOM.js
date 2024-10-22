@@ -241,12 +241,26 @@ for (let index = 0; index < inputsRange.length; index++) {
         let red = document.getElementById("red")
         let green = document.getElementById("green")
         let blue = document.getElementById("blue")
-        console.log(`RED: ${red.value}`);
-        console.log(`Green: ${green.value}`);
-        console.log(`Blue: ${blue.value}`);
+        // console.log(`RED: ${red.value}`);
+        // console.log(`Green: ${green.value}`);
+        // console.log(`Blue: ${blue.value}`);
         
         
         
         document.body.style.backgroundColor = `rgb(${red.value},${green.value},${blue.value})`
     })
 }
+
+
+let enviar = document.getElementById("enviar")
+
+enviar.addEventListener("click", (e)=>{
+  e.preventDefault()
+  let email = document.getElementById("email")
+  let pass = document.getElementById("password")
+  console.log(email.value);
+  console.log(pass.value);
+  
+
+
+})
