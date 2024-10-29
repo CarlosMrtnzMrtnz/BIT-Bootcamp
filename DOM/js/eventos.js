@@ -112,15 +112,24 @@
 //       refran: "Haz bien y no mires a quién."
 //     }
 //   ];
-
+let borrar  = ""
 let agregar = document.getElementById("add")
 agregar.addEventListener("click", (evento) => {
     let input = document.getElementById("input")
     let listaTareas = document.getElementById("tareas")
 
     if (input.value != "") {
-        listaTareas.innerHTML += `<li>${input.value}</li>`
+        let ide = Math.floor(Math.random()*100000)
+        listaTareas.innerHTML += `<li id="${ide}" class="tarea" >${input.value}</li>`
         input.value =""
+        borrar = document.querySelectorAll(".tarea")
+    }
+    for (let index = 0; index < borrar.length; index++) {
+        const element = borrar[index];
+        element.addEventListener("click", (evento) => {           
+            let del = document.getElementById(evento.target.id)
+            del.remove()
+        })
     }
 })
 
