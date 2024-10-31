@@ -252,4 +252,3 @@ submit.addEventListener("click", (evento) =>{
         sessionStorage.clear()
     })
 
-

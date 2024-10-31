@@ -1,18 +1,17 @@
-let url = "https://rickandmortyapi.com/api/character?page=39";
 
 // let datos = []
 
 // fetch("https://api.escuelajs.co/api/v1/categories")
 // .then((res) => {
-//     return res.json()
-// })
-// .then((data) => {
-//     console.log("Respuesta api");
-//     console.log(data);
-//     datos = data
-//     for (let index = 0; index < datos.length; index++) {
-//         const element = datos[index];
-//         console.log(index);
+    //     return res.json()
+    // })
+    // .then((data) => {
+        //     console.log("Respuesta api");
+        //     console.log(data);
+        //     datos = data
+        //     for (let i = 0; i < datos.length; i++) {
+            //         const element = datos[i];
+            //         console.log(i);
 //         console.log(element.name);
 //     }
 // })
@@ -56,25 +55,32 @@ let url = "https://rickandmortyapi.com/api/character?page=39";
 //     // console.log(element);
 //   }
 // };
+let pagina = 1
+let url = `https://rickandmortyapi.com/api/character?page=`;
+carga = () => {
+    let hamster = document.getElementById("hamster")
+    hamster.classList.toggle("d-block")
+}
 
-let rickApi = async (url) => {
-
+let rickApi = async (url, pag) => {
     try {
-        let respuesta = await fetch(url)
+        carga()
+        let respuesta = await fetch(`${url}${pag}`)
         let dataApi = await respuesta.json()
         renderRick(dataApi.results)
-        console.log(dataApi);
     } catch (error) {
         console.log(error);  
     } finally {
         console.log("Fin del Fetch");
+        carga()
     }
 }
- 
-rickApi(url)
+
+rickApi(url, pagina)
 
 renderRick = (array) => {
 let tarjetas = document.getElementById("tarjetas")
+tarjetas.innerHTML = ""
     for (let i = 0; i < array.length; i++) {
         const element = array[i];
         tarjetas.innerHTML += `
@@ -100,4 +106,21 @@ let tarjetas = document.getElementById("tarjetas")
         `
         
     }
+}
+
+let paginacion = document.getElementsByClassName("fa-solid")
+
+for (let index = 0; index < paginacion.length; index++) {
+    const element = paginacion[index];
+    element.addEventListener("click", (evento) => {
+       if ( evento.target.id == "mas" ) {
+        rickApi(url, ++pagina)
+        console.log(pagina);
+        
+       } else if(evento.target.id == "menos") {
+        if (pagina > 1) {
+            rickApi(url, pagina--)            
+        }
+       }
+    })
 }

@@ -124,40 +124,35 @@ const prendas = [
         tipo: "Top",
         cantidad: 50,
         marca: "Nike"
-    },
-    {
+    }, {
         nombre: "Pantalón",
         precio: 39.99,
         detalle: "Pantalón de mezclilla ajustado",
         tipo: "Bottom",
         cantidad: 30,
         marca: "Levi's"
-    },
-    {
+    }, {
         nombre: "Chaqueta",
         precio: 79.99,
         detalle: "Chaqueta de cuero sintético",
         tipo: "Abrigo",
         cantidad: 20,
         marca: "Zara"
-    },
-    {
+    }, {
         nombre: "Vestido",
         precio: 45.50,
         detalle: "Vestido de verano con estampado floral",
         tipo: "Ropa formal",
         cantidad: 15,
         marca: "H&M"
-    },
-    {
+    }, {
         nombre: "Sudadera",
         precio: 29.99,
         detalle: "Sudadera con capucha de felpa",
         tipo: "Top",
         cantidad: 25,
         marca: "Adidas"
-    },
-    {
+    }, {
         nombre: "Falda",
         precio: 22.99,
         detalle: "Falda plisada de seda",
